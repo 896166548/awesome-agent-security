@@ -186,6 +186,7 @@ def _top100_paper_entry_en(p: Dict, rank: int, translations: Dict) -> str:
     lines.append(f"Score: {score:.2f} · {date}")
     lines.append(f"")
     lines.append(f"> {summary}")
+    lines.append(f"<br>")
     return "\n".join(lines)
 
 
@@ -204,6 +205,7 @@ def _top100_paper_entry_cn(p: Dict, rank: int) -> str:
     lines.append(f"评分: {score:.2f} · {date}")
     lines.append(f"")
     lines.append(f"> {summary}")
+    lines.append(f"<br>")
     return "\n".join(lines)
 
 
@@ -215,7 +217,7 @@ def _readme_en(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         f"covering attacks, defense, evaluation, and architecture. "
         f"**{total} papers** ({date_start} ~ {date_end}) from arXiv, ranked by quality score.\n"
     )
-    parts.append(f"[中文版](README_CN.md)\n")
+    parts.append(f"[**English**](README.md) · [中文](README_CN.md)\n")
 
     # TOC
     parts.append("## Table of Contents\n")
@@ -310,7 +312,7 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         f"> AI Agent 安全研究论文精选集——涵盖攻击对抗、防御对齐、安全测评与 Agent 安全架构。"
         f"共 **{total} 篇** arXiv 论文（{date_start} ~ {date_end}），按质量评分排序。\n"
     )
-    parts.append("[English Version](README.md)\n")
+    parts.append("[English](README.md) · [**中文**](README_CN.md)\n")
 
     # TOC
     parts.append("## 目录\n")
