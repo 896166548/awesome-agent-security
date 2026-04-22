@@ -28,30 +28,35 @@ DIMENSION_ORDER = ["攻击与对抗", "防御与对齐", "安全测评", "Agent�
 DIMENSION_CONFIG = {
     "攻击与对抗": {
         "en": "Attacks & Adversaries",
+        "heading": "Attacks and Adversaries",
         "file": "attacks_adversaries.md",
         "short": "Attacks",
         "emoji": "⚔️",
     },
     "防御与对齐": {
         "en": "Defense & Alignment",
+        "heading": "Defense and Alignment",
         "file": "defense_alignment.md",
         "short": "Defense",
         "emoji": "🛡️",
     },
     "安全测评": {
         "en": "Security Evaluation",
+        "heading": "Security Evaluation",
         "file": "security_evaluation.md",
         "short": "Eval",
         "emoji": "📊",
     },
     "Agent安全架构": {
         "en": "Agent Security Architecture",
+        "heading": "Agent Security Architecture",
         "file": "agent_security_architecture.md",
         "short": "Arch",
         "emoji": "🏗️",
     },
     "其他": {
         "en": "Other Topics",
+        "heading": "Other Topics",
         "file": "other_topics.md",
         "short": "Other",
         "emoji": "📄",
@@ -228,8 +233,8 @@ def _readme_en(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         cfg = DIMENSION_CONFIG[dim]
         dim_in_top100 = any(p.get("dimension") == dim for p in top100)
         if dim_in_top100:
-            heading = f"{cfg['emoji']} {cfg['en']}"
-            parts.append(f"  - [{heading}](#{github_anchor(heading)})")
+            h = cfg['heading']
+            parts.append(f"  - [{cfg['emoji']} {h}](#{github_anchor(h)})")
     parts.append("")
 
     # Stats
@@ -293,7 +298,7 @@ def _readme_en(total, scores, tier_counts, date_start, date_end, by_dim, top100,
             parts.append("---\n")
         first_dim = False
         cfg = DIMENSION_CONFIG[dim]
-        parts.append(f"### {cfg['emoji']} {cfg['en']}\n")
+        parts.append(f"### {cfg['heading']}\n")
         for rank, p in dim_papers:
             parts.append(_top100_paper_entry_en(p, rank, translations))
             parts.append("")
@@ -324,7 +329,7 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         dim_in_top100 = any(p.get("dimension") == dim for p in top100)
         if dim_in_top100:
             # Use the English part of the heading for anchor (Chinese headings use bilingual format)
-            parts.append(f"  - [{cfg['emoji']} {dim}](#{github_anchor(cfg['en'])})")
+            parts.append(f"  - [{cfg['emoji']} {dim}](#{github_anchor(cfg['heading'])})")
     parts.append("")
 
     # Stats
@@ -388,7 +393,7 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
             parts.append("---\n")
         first_dim = False
         cfg = DIMENSION_CONFIG[dim]
-        parts.append(f"### {cfg['emoji']} {cfg['en']}（{dim}）\n")
+        parts.append(f"### {cfg['heading']}（{dim}）\n")
         for rank, p in dim_papers:
             parts.append(_top100_paper_entry_cn(p, rank))
             parts.append("")

@@ -10,8 +10,8 @@
 - [分类](#分类)
 - [评分方法](#评分方法)
 - [Top 100 论文](#top-100-论文)
-  - [⚔️ 攻击与对抗](#attacks-adversaries)
-  - [🛡️ 防御与对齐](#defense-alignment)
+  - [⚔️ 攻击与对抗](#attacks-and-adversaries)
+  - [🛡️ 防御与对齐](#defense-and-alignment)
   - [📊 安全测评](#security-evaluation)
   - [🏗️ Agent安全架构](#agent-security-architecture)
   - [📄 其他](#other-topics)
@@ -50,7 +50,7 @@
 
 从 1799 篇论文中选出评分最高的 100 篇（2024-09-24 ~ 2026-04-09），按类别分组展示。
 
-### ⚔️ Attacks & Adversaries（攻击与对抗）
+### Attacks and Adversaries（攻击与对抗）
 
 **#3** [Persistent Pre-Training Poisoning of LLMs](https://arxiv.org/abs/2410.13722)  
 *Yiming Zhang, Javier Rando, Ivan Evtimov 等 8 人*  
@@ -180,7 +180,7 @@
 
 ---
 
-### 🛡️ Defense & Alignment（防御与对齐）
+### Defense and Alignment（防御与对齐）
 
 **#5** [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)  
 *Ananth Balashankar, Ziteng Sun, Jonathan Berant 等 12 人*  
@@ -380,7 +380,7 @@
 
 ---
 
-### 📊 Security Evaluation（安全测评）
+### Security Evaluation（安全测评）
 
 **#1** [MCPEval: Automatic MCP-based Deep Evaluation for AI Agent Models](https://arxiv.org/abs/2507.12806)  
 *Zhiwei Liu, Jielin Qiu, Shiyu Wang 等 12 人*  
@@ -594,7 +594,7 @@
 
 ---
 
-### 🏗️ Agent Security Architecture（Agent安全架构）
+### Agent Security Architecture（Agent安全架构）
 
 **#4** [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2508.15310)  
 *Hengyu An, Jinghuai Zhang, Tianyu Du 等 7 人*  
@@ -724,7 +724,7 @@
 
 ---
 
-### 📄 Other Topics（其他）
+### Other Topics（其他）
 
 **#11** [SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation](https://arxiv.org/abs/2410.15164)  
 *Jingxuan Chen, Derek Yuen, Bin Xie 等 17 人*  

@@ -10,8 +10,8 @@
 - [Categories](#categories)
 - [Scoring Methodology](#scoring-methodology)
 - [Top 100 Papers](#top-100-papers)
-  - [⚔️ Attacks & Adversaries](#attacks-adversaries)
-  - [🛡️ Defense & Alignment](#defense-alignment)
+  - [⚔️ Attacks and Adversaries](#attacks-and-adversaries)
+  - [🛡️ Defense and Alignment](#defense-and-alignment)
   - [📊 Security Evaluation](#security-evaluation)
   - [🏗️ Agent Security Architecture](#agent-security-architecture)
   - [📄 Other Topics](#other-topics)
@@ -50,7 +50,7 @@ Each paper is scored using a weighted formula based on [Semantic Scholar](https:
 
 The top 100 papers out of 1799 (2024-09-24 ~ 2026-04-09), organized by category and ranked by quality score.
 
-### ⚔️ Attacks & Adversaries
+### Attacks and Adversaries
 
 **#3** [Persistent Pre-Training Poisoning of LLMs](https://arxiv.org/abs/2410.13722)  
 *Yiming Zhang et al. (8)*  
@@ -180,7 +180,7 @@ Score: 8.27 · 2025-10-30
 
 ---
 
-### 🛡️ Defense & Alignment
+### Defense and Alignment
 
 **#5** [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)  
 *Ananth Balashankar et al. (12)*  
@@ -380,7 +380,7 @@ Score: 8.27 · 2024-11-13
 
 ---
 
-### 📊 Security Evaluation
+### Security Evaluation
 
 **#1** [MCPEval: Automatic MCP-based Deep Evaluation for AI Agent Models](https://arxiv.org/abs/2507.12806)  
 *Zhiwei Liu et al. (12)*  
@@ -594,7 +594,7 @@ Score: 8.28 · 2025-08-22
 
 ---
 
-### 🏗️ Agent Security Architecture
+### Agent Security Architecture
 
 **#4** [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2508.15310)  
 *Hengyu An et al. (7)*  
@@ -724,7 +724,7 @@ Score: 8.28 · 2025-09-30
 
 ---
 
-### 📄 Other Topics
+### Other Topics
 
 **#11** [SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation](https://arxiv.org/abs/2410.15164)  
 *Jingxuan Chen et al. (17)*  
