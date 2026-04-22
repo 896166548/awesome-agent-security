@@ -50,7 +50,8 @@
 
 从 1799 篇论文中选出评分最高的 100 篇（2024-09-24 ~ 2026-04-09），按类别分组展示。
 
-### Attacks and Adversaries
+<a id="attacks-and-adversaries"></a>
+### ⚔️ 攻击与对抗
 
 **#3** [Persistent Pre-Training Poisoning of LLMs](https://arxiv.org/abs/2410.13722)  
 *Yiming Zhang, Javier Rando, Ivan Evtimov 等 8 人*  
@@ -180,7 +181,8 @@
 
 ---
 
-### Defense and Alignment
+<a id="defense-and-alignment"></a>
+### 🛡️ 防御与对齐
 
 **#5** [InfAlign: Inference-aware language model alignment](https://arxiv.org/abs/2412.19792)  
 *Ananth Balashankar, Ziteng Sun, Jonathan Berant 等 12 人*  
@@ -380,7 +382,8 @@
 
 ---
 
-### Security Evaluation
+<a id="security-evaluation"></a>
+### 📊 安全测评
 
 **#1** [MCPEval: Automatic MCP-based Deep Evaluation for AI Agent Models](https://arxiv.org/abs/2507.12806)  
 *Zhiwei Liu, Jielin Qiu, Shiyu Wang 等 12 人*  
@@ -594,7 +597,8 @@
 
 ---
 
-### Agent Security Architecture
+<a id="agent-security-architecture"></a>
+### 🏗️ Agent安全架构
 
 **#4** [IPIGuard: A Novel Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2508.15310)  
 *Hengyu An, Jinghuai Zhang, Tianyu Du 等 7 人*  
@@ -724,7 +728,8 @@
 
 ---
 
-### Other Topics
+<a id="other-topics"></a>
+### 📄 其他
 
 **#11** [SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation](https://arxiv.org/abs/2410.15164)  
 *Jingxuan Chen, Derek Yuen, Bin Xie 等 17 人*  

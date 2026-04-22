@@ -298,7 +298,9 @@ def _readme_en(total, scores, tier_counts, date_start, date_end, by_dim, top100,
             parts.append("---\n")
         first_dim = False
         cfg = DIMENSION_CONFIG[dim]
-        parts.append(f"### {cfg['heading']}\n")
+        anchor = github_anchor(cfg['heading'])
+        parts.append(f'<a id="{anchor}"></a>')
+        parts.append(f"### {cfg['emoji']} {cfg['heading']}\n")
         for rank, p in dim_papers:
             parts.append(_top100_paper_entry_en(p, rank, translations))
             parts.append("")
@@ -393,7 +395,9 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
             parts.append("---\n")
         first_dim = False
         cfg = DIMENSION_CONFIG[dim]
-        parts.append(f"### {cfg['heading']}\n")
+        anchor = github_anchor(cfg['heading'])
+        parts.append(f'<a id="{anchor}"></a>')
+        parts.append(f"### {cfg['emoji']} {dim}\n")
         for rank, p in dim_papers:
             parts.append(_top100_paper_entry_cn(p, rank))
             parts.append("")
