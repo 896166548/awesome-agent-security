@@ -115,6 +115,21 @@ def tier_badge(tier: str) -> str:
         return "C"
 
 
+def github_anchor(text: str) -> str:
+    """Generate GitHub-compatible anchor from heading text.
+
+    GitHub rules: lowercase, strip non-alphanumeric except - and space,
+    spaces become -, collapse multiple -, strip leading/trailing -.
+    """
+    text = text.lower()
+    # Remove & and other punctuation but keep alphanumeric, emoji, CJK, spaces, hyphens
+    text = re.sub(r'[^\w\s\u4e00-\u9fff\u2600-\u27bf\ufe00-\ufe0f\u1f000-\u1f9ff-]', '', text)
+    text = text.strip()
+    text = re.sub(r'\s+', '-', text)
+    text = re.sub(r'-+', '-', text)
+    return text
+
+
 # ── README Generation ──────────────────────────────────
 
 def load_translations() -> Dict[str, str]:
@@ -166,8 +181,10 @@ def _top100_paper_entry_en(p: Dict, rank: int, translations: Dict) -> str:
     summary = translations.get(pid, p.get("summary", "")).strip()
 
     lines = []
-    lines.append(f"**#{rank}** [{title}]({url})")
-    lines.append(f"*{authors}* · Score: {score:.2f} · {date}")
+    lines.append(f"**#{rank}** [{title}]({url})  ")
+    lines.append(f"*{authors}*  ")
+    lines.append(f"Score: {score:.2f} · {date}")
+    lines.append(f"")
     lines.append(f"> {summary}")
     return "\n".join(lines)
 
@@ -182,8 +199,10 @@ def _top100_paper_entry_cn(p: Dict, rank: int) -> str:
     summary = p.get("summary", "暂无总结").strip()
 
     lines = []
-    lines.append(f"**#{rank}** [{title}]({url})")
-    lines.append(f"*{authors}* · 评分: {score:.2f} · {date}")
+    lines.append(f"**#{rank}** [{title}]({url})  ")
+    lines.append(f"*{authors}*  ")
+    lines.append(f"评分: {score:.2f} · {date}")
+    lines.append(f"")
     lines.append(f"> {summary}")
     return "\n".join(lines)
 
@@ -206,10 +225,10 @@ def _readme_en(total, scores, tier_counts, date_start, date_end, by_dim, top100,
     parts.append("- [Top 100 Papers](#top-100-papers)")
     for dim in DIMENSION_ORDER:
         cfg = DIMENSION_CONFIG[dim]
-        anchor = cfg['en'].lower().replace(' ', '-').replace('&', '')
         dim_in_top100 = any(p.get("dimension") == dim for p in top100)
         if dim_in_top100:
-            parts.append(f"  - [{cfg['emoji']} {cfg['en']}](#{anchor})")
+            heading = f"{cfg['emoji']} {cfg['en']}"
+            parts.append(f"  - [{heading}](#{github_anchor(heading)})")
     parts.append("")
 
     # Stats
@@ -303,7 +322,8 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         cfg = DIMENSION_CONFIG[dim]
         dim_in_top100 = any(p.get("dimension") == dim for p in top100)
         if dim_in_top100:
-            parts.append(f"  - [{cfg['emoji']} {dim}](#{cfg['en'].lower().replace(' ', '-').replace('&', '')})")
+            heading = f"{cfg['emoji']} {cfg['en']}（{dim}）"
+            parts.append(f"  - [{cfg['emoji']} {dim}](#{github_anchor(heading)})")
     parts.append("")
 
     # Stats
@@ -367,7 +387,7 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
             parts.append("---\n")
         first_dim = False
         cfg = DIMENSION_CONFIG[dim]
-        parts.append(f"### {cfg['emoji']} {dim}\n")
+        parts.append(f"### {cfg['emoji']} {cfg['en']}（{dim}）\n")
         for rank, p in dim_papers:
             parts.append(_top100_paper_entry_cn(p, rank))
             parts.append("")
