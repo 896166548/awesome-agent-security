@@ -118,12 +118,11 @@ def tier_badge(tier: str) -> str:
 def github_anchor(text: str) -> str:
     """Generate GitHub-compatible anchor from heading text.
 
-    GitHub rules: lowercase, strip non-alphanumeric except - and space,
-    spaces become -, collapse multiple -, strip leading/trailing -.
+    GitHub strips everything except a-z 0-9 - and spaces,
+    then lowercases, replaces spaces with -, collapses --.
     """
     text = text.lower()
-    # Remove & and other punctuation but keep alphanumeric, emoji, CJK, spaces, hyphens
-    text = re.sub(r'[^\w\s\u4e00-\u9fff\u2600-\u27bf\ufe00-\ufe0f\u1f000-\u1f9ff-]', '', text)
+    text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = text.strip()
     text = re.sub(r'\s+', '-', text)
     text = re.sub(r'-+', '-', text)
@@ -324,8 +323,8 @@ def _readme_cn(total, scores, tier_counts, date_start, date_end, by_dim, top100,
         cfg = DIMENSION_CONFIG[dim]
         dim_in_top100 = any(p.get("dimension") == dim for p in top100)
         if dim_in_top100:
-            heading = f"{cfg['emoji']} {cfg['en']}（{dim}）"
-            parts.append(f"  - [{cfg['emoji']} {dim}](#{github_anchor(heading)})")
+            # Use the English part of the heading for anchor (Chinese headings use bilingual format)
+            parts.append(f"  - [{cfg['emoji']} {dim}](#{github_anchor(cfg['en'])})")
     parts.append("")
 
     # Stats

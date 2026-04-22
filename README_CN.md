@@ -10,11 +10,11 @@
 - [分类](#分类)
 - [评分方法](#评分方法)
 - [Top 100 论文](#top-100-论文)
-  - [⚔️ 攻击与对抗](#⚔️-attacks-adversaries攻击与对抗)
-  - [🛡️ 防御与对齐](#️-defense-alignment防御与对齐)
-  - [📊 安全测评](#security-evaluation安全测评)
-  - [🏗️ Agent安全架构](#️-agent-security-architectureagent安全架构)
-  - [📄 其他](#other-topics其他)
+  - [⚔️ 攻击与对抗](#attacks-adversaries)
+  - [🛡️ 防御与对齐](#defense-alignment)
+  - [📊 安全测评](#security-evaluation)
+  - [🏗️ Agent安全架构](#agent-security-architecture)
+  - [📄 其他](#other-topics)
 
 ## 统计
 

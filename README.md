@@ -10,10 +10,10 @@
 - [Categories](#categories)
 - [Scoring Methodology](#scoring-methodology)
 - [Top 100 Papers](#top-100-papers)
-  - [⚔️ Attacks & Adversaries](#⚔️-attacks-adversaries)
-  - [🛡️ Defense & Alignment](#️-defense-alignment)
+  - [⚔️ Attacks & Adversaries](#attacks-adversaries)
+  - [🛡️ Defense & Alignment](#defense-alignment)
   - [📊 Security Evaluation](#security-evaluation)
-  - [🏗️ Agent Security Architecture](#️-agent-security-architecture)
+  - [🏗️ Agent Security Architecture](#agent-security-architecture)
   - [📄 Other Topics](#other-topics)
 
 ## Statistics
